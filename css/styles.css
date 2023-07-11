@@ -1,0 +1,92 @@
+/* Basic resets */
+
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* For the Navigation container to have a positionio reference */
+
+.slides-container {
+  width: 1200px;
+  height: 824px;
+  margin: 0 auto;
+  position: relative;
+  border: 10px solid lightgray;
+  /* box-shadow: 0 0 20px grey; */
+  /* Hide the images exctending outside this container */
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  width: 100%;
+  transition: all 0.4s ease;
+
+  background-color: darkgrey;
+  border: 1px solid greenyellow;
+}
+
+/* Next and prev icons */
+
+.navigation {
+  position: relative;
+  margin: auto;
+  width: 1300px;
+  top: 350px;
+  z-index: 1;
+}
+
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: rgb(215, 214, 215);
+  font-size: 300%;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Slide indicators */
+.slideIndicators {
+  /* border: 1px solid red; */
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 100px;
+  background-color: darkgrey;
+  opacity: 50%;
+}
+
+.indicator {
+  color: white;
+  opacity: 70%;
+  font-size: 150%;
+  margin: 10px;
+}
+
+.active {
+  color: red;
+}
