@@ -2,7 +2,7 @@
 const slide = document.querySelector(".slide");
 
 // Get all the div.slide containers
-// Creates a NONDELIST which can be iterated over
+// Creates a static NONDELIST which can be iterated over using the forEach() method
 const slideImg = document.querySelectorAll(".slide img");
 
 // Initialize a counter to keep track of the slide progression
@@ -10,7 +10,6 @@ const slideImg = document.querySelectorAll(".slide img");
 let counter = 0;
 
 // Get the width of the slideImg container using one of the indices of the node and the DOMs clientWidth property.
-
 // The clientWidth property returns the width of an element in pixels, but only includes padding and not border, margin or scrollbars. The clientWidth property is read-only - it can not be changed with JS.
 const slideWidth = slideImg[0].clientWidth;
 
@@ -36,7 +35,7 @@ nextArrow.addEventListener("click", () => {
   // console.log(`Count ${counter} of ${slideImg.length}`);
   slide.style.transform = `translateX(-${slideWidth * counter}px)`;
 
-  // Wrangle the indicators with for / of loop and nested conditional
+  // Advance the indicators with for / of loop and nested conditional
   for (const indicator of indicators) {
     const indicatorCount = Number(indicator.dataset.indicator);
     console.log(` Indicator is
@@ -61,7 +60,7 @@ prevArrow.addEventListener("click", () => {
   console.log(counter);
   slide.style.transform = `translateX(-${slideWidth * counter}px)`;
 
-  // Wrangle the indicators with for / of loop and nested conditional
+  // Add colors to the indicators with for / of loop and nested conditional
   for (const indicator of indicators) {
     const indicatorCount = Number(indicator.dataset.indicator);
 
