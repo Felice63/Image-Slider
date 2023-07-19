@@ -3,7 +3,6 @@ const slide = document.querySelector(".slide");
 
 // Get all the div.slide containers
 // Creates a NONDELIST which can be iterated over
-// Will likely need the for / of loop
 const slideImg = document.querySelectorAll(".slide img");
 
 // Initialize a counter to keep track of the slide progression
