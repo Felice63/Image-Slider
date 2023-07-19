@@ -1,5 +1,3 @@
-// SEE: https://www.youtube.com/watch?v=KcdBOoK3Pfw
-
 // Get the outer most slide container
 const slide = document.querySelector(".slide");
 
